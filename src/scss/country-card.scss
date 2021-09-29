@@ -1,0 +1,36 @@
+
+.country{
+    display: flex;
+}
+.country__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    flex-direction: column;
+}
+.country_info{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.country__metrics{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.country_flag--image{
+    display: block;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.country__languages--container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
