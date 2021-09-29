@@ -8,11 +8,22 @@ const BASE_URL = 'https://restcountries.com/v2/name/';
  */
 class CountriesService
 {
+    constructor()
+    {
+        //Прогресс бар
+        this.progress = document.querySelector('.donut');
+    }
+
     fetchCountries(searchQuery)
     {
+        this.progress.classList.remove('hidden');
         return fetch(`${BASE_URL}${searchQuery}`)
         .then(response => response.json())
-        .then(data => data)
+        .then(data => 
+        {
+            this.progress.classList.add('hidden');
+            return data;
+        })
         .catch(error => `Ошибка при загрузке данных: ${error}`);
     }
 }
